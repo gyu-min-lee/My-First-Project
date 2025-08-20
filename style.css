@@ -1,0 +1,63 @@
+.card-front {
+    display: flex;
+    width: 860px;
+    height: 540px;
+    font-size: 30px;
+    border: 5px solid black;
+}
+.card-front h2 {
+    font-size: 60px; 
+    margin-left: 25px;
+}
+.card-front h3 {
+    font-size: 50px;
+    margin-left: 90px;
+    margin-top: -30px;
+}
+.card-front img {
+    width: 300px;
+    height: 360px;
+    border: 5px solid black;
+    margin-left: 45px;
+    margin-top: 40px;
+}
+.card-front p {
+    margin-left: 35px;
+}
+.card-back {
+    display: flex;
+    flex-direction: column;
+    width: 860px;
+    height: 540px;
+    font-size: 35px;
+    border: 5px solid black;
+    transform: rotateY(180deg);
+}
+.card-back h2 {
+    font-size: 50px;
+    margin-left: 41.5px;
+}
+.card-back ul {
+    padding-left: 90px;
+}
+
+.card {
+    perspective: 1000px;
+}
+.card-inner {
+    position: relative;
+    width: 860px;
+    height: 540px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
