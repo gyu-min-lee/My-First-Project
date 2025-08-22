@@ -1,28 +1,48 @@
+body {
+    background-color: #e0f7fa;
+}
 .card-front {
     display: flex;
+    position: relative;
     width: 860px;
     height: 540px;
     font-size: 30px;
-    border: 5px solid black;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-image: url(img/premium_photo-1685086785636-2a1a0e5b591f.avif);
+    background-size: cover;
+    overflow: hidden;
+}
+.card-front::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+.card-front * {
+    position: relative;
+    z-index: 2;
 }
 .card-front h2 {
-    font-size: 60px; 
-    margin-left: 25px;
+    font-size: 55px; 
+    margin-left: 50px;
 }
 .card-front h3 {
     font-size: 50px;
-    margin-left: 90px;
+    margin-left: 100px;
     margin-top: -30px;
 }
 .card-front img {
     width: 300px;
     height: 360px;
-    border: 5px solid black;
+    border: 2px solid black;
     margin-left: 45px;
     margin-top: 40px;
 }
+
 .card-front p {
-    margin-left: 35px;
+    margin-left: 70px;
 }
 .card-back {
     display: flex;
@@ -30,8 +50,25 @@
     width: 860px;
     height: 540px;
     font-size: 35px;
-    border: 5px solid black;
+    border-radius: 5px solid black;
     transform: rotateY(180deg);
+    border: 3px solid black;
+    border-radius: 50px;
+    position: relative;
+    background-image: url(img/premium_photo-1685086785636-2a1a0e5b591f.avif);
+    background-size: cover;
+    overflow: hidden;
+}
+.card-back::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+.card-back * {
+    position: relative;
+    z-index: 2;
 }
 .card-back h2 {
     font-size: 50px;
@@ -45,6 +82,8 @@
     perspective: 1000px;
 }
 .card-inner {
+    margin-left: 70px;
+    margin-top: 50px;
     position: relative;
     width: 860px;
     height: 540px;
@@ -60,4 +99,41 @@
 }
 .card-inner.is-flipped {
     transform: rotateY(180deg);
+}
+
+.box-container {
+    display: flex;
+    gap: 170px;
+    margin-top: 80px;
+    margin-left: 120px;
+
+}
+.box {
+    display: flex;
+    border-radius: 35px;
+    padding: 70px;
+}
+.box-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box-text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.git {
+    background-image: url(img/github_logo.webp);
+    background-size: cover;
+    overflow: hidden;
+}
+.insta {
+    background-image: url(img/Instagram_logo.webp);
+    background-size: cover;
+    overflow: hidden;
+}
+.naver {
+    background-image: url(img/naver\ logo.jpeg);
+    background-size: cover;
+    overflow: hidden;
 }
